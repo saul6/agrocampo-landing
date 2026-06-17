@@ -1,0 +1,101 @@
+"use client";
+
+import Image from "next/image";
+import { useState, useEffect, useCallback } from "react";
+
+const slides = [
+  { src: "/images/hero-1.jpg", alt: "Cultivo de fresas" },
+  { src: "/images/hero-2.jpg", alt: "Parcela agricola" },
+  { src: "/images/hero-3.jpg", alt: "Campo de cultivo" },
+  { src: "/images/hero-4.jpg", alt: "Cultivo de berries" },
+  { src: "/images/hero-5.jpg", alt: "Trabajo agricola en campo" },
+  { src: "/images/hero-6.jpg", alt: "Berries maduros" },
+];
+
+export function HeroCarousel() {
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  const advance = useCallback(() => {
+    setCurrent((c) => (c + 1) % slides.length);
+  }, []);
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(advance, 5000);
+    return () => clearInterval(id);
+  }, [advance, paused]);
+
+  return (
+    <>
+      {/* Image stack — each image fades in/out */}
+      <div className="absolute inset-0 overflow-hidden">
+        {slides.map((slide, i) => (
+          <div
+            key={i}
+            className="absolute inset-0"
+            style={{
+              opacity: i === current ? 1 : 0,
+              transition: "opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1)",
+              zIndex: i === current ? 1 : 0,
+            }}
+          >
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              className="object-cover object-center"
+              priority={i === 0}
+              sizes="100vw"
+              quality={75}
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Blue brand overlay — tints photos with AgroCampo identity + ensures legibility */}
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(155deg, rgba(13,90,143,0.74) 0%, rgba(43,122,181,0.60) 55%, rgba(43,122,181,0.68) 100%)",
+        }}
+      />
+
+      {/* Bottom gradient for dot area readability */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-32 z-10 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(12,36,60,0.5) 0%, transparent 100%)",
+        }}
+      />
+
+      {/* Dot indicators — pill shape for active, small circle for rest */}
+      <div
+        className="absolute bottom-7 left-1/2 -translate-x-1/2 flex items-center gap-[7px] z-20"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            aria-label={`Imagen ${i + 1}`}
+            style={{
+              height: "5px",
+              width: i === current ? "22px" : "5px",
+              borderRadius: "9999px",
+              background:
+                i === current ? "#ffffff" : "rgba(255,255,255,0.38)",
+              border: "none",
+              padding: 0,
+              cursor: "pointer",
+              transition: "width 0.35s ease, background 0.35s ease",
+            }}
+          />
+        ))}
+      </div>
+    </>
+  );
+}

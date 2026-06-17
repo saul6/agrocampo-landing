@@ -1,187 +1,114 @@
-import Image from "next/image";
+import { HeroCarousel } from "./HeroCarousel";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function Hero() {
   return (
-    <section
-      className="relative overflow-hidden"
-      style={{ background: "#ffffff", minHeight: "100dvh" }}
-    >
-      {/* Geometric background decorations */}
-      <div
-        className="absolute -top-24 -right-24 w-[520px] h-[520px] rounded-full pointer-events-none"
-        style={{ background: "rgba(43,122,181,0.055)" }}
-      />
-      <div
-        className="absolute top-1/2 -right-16 w-[280px] h-[280px] rounded-full pointer-events-none"
-        style={{ background: "rgba(30,136,199,0.04)" }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-64 h-64 rounded-full pointer-events-none"
-        style={{ background: "rgba(43,122,181,0.035)" }}
-      />
+    <section className="relative overflow-hidden" style={{ minHeight: "100dvh" }}>
+      {/* Full-screen carousel + overlay (client component) */}
+      <HeroCarousel />
 
-      <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-12 items-center min-h-[100dvh] py-24 lg:py-0">
-        {/* Text column */}
-        <div className="flex flex-col gap-7 pt-8 lg:pt-0">
-          <ScrollReveal>
-            <span
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold w-fit"
-              style={{ background: "#e3f2fd", color: "#0d5a8f" }}
-            >
+      {/* Text content — sits above overlay at z-20 */}
+      <div
+        className="relative z-20 flex items-center"
+        style={{ minHeight: "100dvh" }}
+      >
+        <div className="max-w-7xl mx-auto px-6 w-full py-24 lg:py-0">
+          <div className="max-w-[680px] flex flex-col gap-7">
+            {/* Certification kicker */}
+            <ScrollReveal>
               <span
-                className="w-1.5 h-1.5 rounded-full"
-                style={{ background: "#2b7ab5" }}
-              />
-              Trazabilidad GlobalGAP &middot; PrimusGFS &middot; SENASICA
-            </span>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.06}>
-            <h1
-              className="font-semibold leading-[1.05] tracking-tight"
-              style={{
-                fontSize: "clamp(2.4rem, 4.5vw, 4.2rem)",
-                color: "#0d5a8f",
-              }}
-            >
-              Inocuidad que auditan.{" "}
-              <span style={{ color: "#2b7ab5" }}>Reportes</span> que se
-              generan solos.
-            </h1>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.11}>
-            <p
-              className="text-base leading-relaxed max-w-[52ch]"
-              style={{ color: "#717182" }}
-            >
-              AgroCampo automatiza los formatos de inocuidad que exige
-              PrimusGFS: desde la inspeccion preoperacional hasta el botiquin
-              de primeros auxilios. Todo desde tu celular, con PDF listo en
-              segundos.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.16}>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="#lista-espera"
-                className="btn-primary px-6 py-3 rounded-full text-sm font-semibold"
-              >
-                Unirme a la lista de espera
-              </a>
-              <a
-                href="#demo"
-                className="btn-ghost px-6 py-3 rounded-full text-sm font-medium"
-              >
-                Ver demo
-              </a>
-            </div>
-          </ScrollReveal>
-
-          {/* Social proof micro-strip */}
-          <ScrollReveal delay={0.2}>
-            <div className="flex items-center gap-4 pt-2">
-              <div
-                className="flex items-center gap-2 text-xs font-medium"
-                style={{ color: "#717182" }}
-              >
-                <span
-                  className="w-2 h-2 rounded-full"
-                  style={{ background: "#2b7ab5" }}
-                />
-                GlobalGAP
-              </div>
-              <div
-                className="w-px h-3.5"
-                style={{ background: "rgba(0,0,0,0.12)" }}
-              />
-              <div
-                className="flex items-center gap-2 text-xs font-medium"
-                style={{ color: "#717182" }}
-              >
-                <span
-                  className="w-2 h-2 rounded-full"
-                  style={{ background: "#1e88c7" }}
-                />
-                PrimusGFS
-              </div>
-              <div
-                className="w-px h-3.5"
-                style={{ background: "rgba(0,0,0,0.12)" }}
-              />
-              <div
-                className="flex items-center gap-2 text-xs font-medium"
-                style={{ color: "#717182" }}
-              >
-                <span
-                  className="w-2 h-2 rounded-full"
-                  style={{ background: "#0d5a8f" }}
-                />
-                SENASICA
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-
-        {/* Photo column */}
-        <div className="hidden lg:block relative">
-          <ScrollReveal delay={0.08}>
-            {/* Offset accent rectangle behind the photo */}
-            <div
-              className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl"
-              style={{ background: "#e3f2fd" }}
-            />
-            <div
-              className="absolute -bottom-2 -right-2 w-full h-full rounded-2xl"
-              style={{ background: "rgba(43,122,181,0.12)" }}
-            />
-
-            <div
-              className="relative w-full overflow-hidden rounded-2xl"
-              style={{
-                height: "560px",
-                border: "1px solid rgba(43,122,181,0.18)",
-              }}
-            >
-              <Image
-                src="https://picsum.photos/seed/agrocampo-berry/800/1000"
-                alt="Campo de berries"
-                fill
-                className="object-cover"
-                priority
-              />
-              {/* Very subtle blue tint overlay */}
-              <div
-                className="absolute inset-0"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold w-fit"
                 style={{
-                  background:
-                    "linear-gradient(160deg, rgba(43,122,181,0.04) 0%, rgba(13,90,143,0.12) 100%)",
-                }}
-              />
-              {/* Bottom fade */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-24"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(255,255,255,0.4), transparent)",
-                }}
-              />
-              {/* Badge */}
-              <div
-                className="absolute bottom-5 left-5 px-3 py-1.5 rounded-full text-xs font-semibold"
-                style={{
-                  background: "rgba(255,255,255,0.92)",
-                  border: "1px solid rgba(43,122,181,0.2)",
-                  color: "#0d5a8f",
-                  backdropFilter: "blur(8px)",
+                  background: "rgba(255,255,255,0.16)",
+                  border: "1px solid rgba(255,255,255,0.3)",
+                  color: "#ffffff",
+                  backdropFilter: "blur(6px)",
+                  WebkitBackdropFilter: "blur(6px)",
                 }}
               >
-                Inocuidad certificada
+                <span
+                  className="w-1.5 h-1.5 rounded-full"
+                  style={{ background: "#93c5fd" }}
+                />
+                Trazabilidad GlobalGAP &middot; PrimusGFS &middot; SENASICA
+              </span>
+            </ScrollReveal>
+
+            {/* Main headline */}
+            <ScrollReveal delay={0.06}>
+              <h1
+                className="font-semibold leading-[1.05] tracking-tight text-white"
+                style={{
+                  fontSize: "clamp(2.6rem, 5vw, 4.4rem)",
+                  textShadow: "0 2px 16px rgba(0,0,0,0.2)",
+                }}
+              >
+                Inocuidad que auditan.{" "}
+                <span style={{ color: "#bfdbfe" }}>Reportes</span> que se
+                generan solos.
+              </h1>
+            </ScrollReveal>
+
+            {/* Subheadline */}
+            <ScrollReveal delay={0.11}>
+              <p
+                className="text-base leading-relaxed max-w-[52ch]"
+                style={{
+                  color: "rgba(255,255,255,0.86)",
+                  textShadow: "0 1px 6px rgba(0,0,0,0.18)",
+                }}
+              >
+                AgroCampo automatiza los formatos de inocuidad que exige
+                PrimusGFS: desde la inspeccion preoperacional hasta el botiquin
+                de primeros auxilios. Todo desde tu celular, con PDF listo en
+                segundos.
+              </p>
+            </ScrollReveal>
+
+            {/* CTAs */}
+            <ScrollReveal delay={0.16}>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="#lista-espera"
+                  className="btn-white px-6 py-3 rounded-full text-sm font-semibold"
+                >
+                  Unirme a la lista de espera
+                </a>
+                <a
+                  href="#demo"
+                  className="px-6 py-3 rounded-full text-sm font-medium transition-colors active:scale-[0.97]"
+                  style={{
+                    border: "1.5px solid rgba(255,255,255,0.48)",
+                    color: "#ffffff",
+                  }}
+                >
+                  Ver demo
+                </a>
               </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+
+            {/* Trust strip */}
+            <ScrollReveal delay={0.2}>
+              <div className="flex items-center gap-4 pt-1">
+                {["GlobalGAP", "PrimusGFS", "SENASICA"].map((cert, i) => (
+                  <div key={cert} className="flex items-center gap-4">
+                    {i > 0 && (
+                      <div
+                        className="w-px h-3"
+                        style={{ background: "rgba(255,255,255,0.28)" }}
+                      />
+                    )}
+                    <span
+                      className="text-xs font-medium"
+                      style={{ color: "rgba(255,255,255,0.62)" }}
+                    >
+                      {cert}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>
