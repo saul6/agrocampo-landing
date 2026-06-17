@@ -53,21 +53,21 @@ export function HeroCarousel() {
         ))}
       </div>
 
-      {/* Blue brand overlay — tints photos with AgroCampo identity + ensures legibility */}
+      {/* Blue brand overlay — directional: opaco izquierda (texto), se abre a la derecha (foto) */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(155deg, rgba(13,90,143,0.74) 0%, rgba(43,122,181,0.60) 55%, rgba(43,122,181,0.68) 100%)",
+            "linear-gradient(to right, rgba(12,36,60,0.68) 0%, rgba(43,122,181,0.44) 45%, rgba(43,122,181,0.28) 100%)",
         }}
       />
 
-      {/* Bottom gradient for dot area readability */}
+      {/* Capa vertical: oscurece ligeramente arriba y abajo, respira en el centro */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 z-10 pointer-events-none"
+        className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to top, rgba(12,36,60,0.5) 0%, transparent 100%)",
+            "linear-gradient(to bottom, rgba(12,36,60,0.18) 0%, transparent 30%, transparent 65%, rgba(12,36,60,0.42) 100%)",
         }}
       />
 

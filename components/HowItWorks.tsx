@@ -24,7 +24,7 @@ export function HowItWorks() {
     <section id="como-funciona" className="py-24" style={{ background: "#ffffff" }}>
       <div className="max-w-7xl mx-auto px-6">
         <ScrollReveal>
-          <div className="mb-16 text-center">
+          <div className="mb-16 text-center pt-1">
             <p
               className="text-xs font-semibold tracking-[0.14em] uppercase mb-3"
               style={{ color: "#2b7ab5" }}
@@ -35,6 +35,7 @@ export function HowItWorks() {
               className="font-semibold tracking-tight"
               style={{
                 fontSize: "clamp(1.8rem, 3vw, 2.75rem)",
+                lineHeight: 1.3,
                 color: "#0d5a8f",
               }}
             >
