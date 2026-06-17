@@ -33,22 +33,27 @@ export function Features() {
     <section
       id="beneficios"
       className="py-24"
-      style={{ background: "#0f2216" }}
+      style={{ background: "#f8f9fa" }}
     >
       <div className="max-w-7xl mx-auto px-6">
         <ScrollReveal>
           <div className="mb-14">
             <p
               className="text-xs font-semibold tracking-[0.14em] uppercase mb-3"
-              style={{ color: "#4ade80" }}
+              style={{ color: "#2b7ab5" }}
             >
               Beneficios
             </p>
             <h2
               className="font-semibold leading-tight tracking-tight"
-              style={{ fontSize: "clamp(1.8rem, 3vw, 2.75rem)", color: "#f0fdf4" }}
+              style={{
+                fontSize: "clamp(1.8rem, 3vw, 2.75rem)",
+                color: "#0d5a8f",
+              }}
             >
-              Todo lo que necesita tu operacion<br />en una sola app.
+              Todo lo que necesita tu operacion
+              <br />
+              en una sola app.
             </h2>
           </div>
         </ScrollReveal>
@@ -61,29 +66,29 @@ export function Features() {
                 <div
                   className="h-full rounded-2xl p-7 flex flex-col gap-5 min-h-[200px]"
                   style={{
-                    background: "#152a1b",
-                    border: "1px solid rgba(255,255,255,0.07)",
+                    background: "#ffffff",
+                    border: "1px solid rgba(0,0,0,0.08)",
                   }}
                 >
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center"
+                    className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
                     style={{
-                      background: "rgba(74,222,128,0.12)",
-                      border: "1px solid rgba(74,222,128,0.2)",
+                      background: "#e3f2fd",
+                      border: "1px solid rgba(43,122,181,0.2)",
                     }}
                   >
-                    <Icon size={20} color="#4ade80" weight="duotone" />
+                    <Icon size={20} color="#2b7ab5" weight="duotone" />
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3
                       className="font-semibold text-base leading-snug"
-                      style={{ color: "#f0fdf4" }}
+                      style={{ color: "#0d5a8f" }}
                     >
                       {f.title}
                     </h3>
                     <p
                       className="text-sm leading-relaxed"
-                      style={{ color: "rgba(240,253,244,0.55)" }}
+                      style={{ color: "#717182" }}
                     >
                       {f.body}
                     </p>

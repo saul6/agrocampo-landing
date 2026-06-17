@@ -34,25 +34,35 @@ export function WaitlistSection() {
   return (
     <section
       id="lista-espera"
-      className="py-24"
-      style={{ background: "#0f2216" }}
+      className="py-24 relative overflow-hidden"
+      style={{ background: "#2b7ab5" }}
     >
-      <div className="max-w-2xl mx-auto px-6 text-center">
+      {/* Subtle circles for depth */}
+      <div
+        className="absolute -top-20 -left-20 w-72 h-72 rounded-full pointer-events-none"
+        style={{ background: "rgba(255,255,255,0.06)" }}
+      />
+      <div
+        className="absolute -bottom-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+        style={{ background: "rgba(255,255,255,0.05)" }}
+      />
+
+      <div className="relative max-w-2xl mx-auto px-6 text-center">
         <p
           className="text-xs font-semibold tracking-[0.14em] uppercase mb-4"
-          style={{ color: "#4ade80" }}
+          style={{ color: "rgba(255,255,255,0.7)" }}
         >
           Lista de espera
         </p>
         <h2
-          className="font-semibold tracking-tight mb-4"
-          style={{ fontSize: "clamp(1.7rem, 3vw, 2.5rem)", color: "#f0fdf4" }}
+          className="font-semibold tracking-tight mb-4 text-white"
+          style={{ fontSize: "clamp(1.7rem, 3vw, 2.5rem)" }}
         >
           Se el primero en saber cuando lancemos.
         </h2>
         <p
           className="text-base leading-relaxed mb-10"
-          style={{ color: "rgba(240,253,244,0.58)" }}
+          style={{ color: "rgba(255,255,255,0.72)" }}
         >
           AgroCampo esta en desarrollo activo. Dejanos tu correo y te avisamos
           en cuanto este listo para tu operacion.
@@ -62,9 +72,9 @@ export function WaitlistSection() {
           <div
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold"
             style={{
-              background: "rgba(74,222,128,0.15)",
-              border: "1px solid rgba(74,222,128,0.3)",
-              color: "#4ade80",
+              background: "rgba(255,255,255,0.18)",
+              border: "1px solid rgba(255,255,255,0.3)",
+              color: "#ffffff",
             }}
           >
             Listo, te avisamos cuando lancemos.
@@ -72,7 +82,7 @@ export function WaitlistSection() {
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
+            className="flex flex-col sm:flex-row gap-2.5 max-w-lg mx-auto"
           >
             <input
               type="text"
@@ -81,9 +91,9 @@ export function WaitlistSection() {
               onChange={(e) => setNombre(e.target.value)}
               className="flex-1 px-4 py-3 rounded-full text-sm outline-none"
               style={{
-                background: "#152a1b",
-                border: "1px solid rgba(255,255,255,0.12)",
-                color: "#f0fdf4",
+                background: "rgba(255,255,255,0.15)",
+                border: "1px solid rgba(255,255,255,0.25)",
+                color: "#ffffff",
               }}
             />
             <input
@@ -94,20 +104,16 @@ export function WaitlistSection() {
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 px-4 py-3 rounded-full text-sm outline-none"
               style={{
-                background: "#152a1b",
-                border: "1px solid rgba(255,255,255,0.12)",
-                color: "#f0fdf4",
+                background: "rgba(255,255,255,0.15)",
+                border: "1px solid rgba(255,255,255,0.25)",
+                color: "#ffffff",
               }}
             />
             <button
               type="submit"
               disabled={status === "loading"}
-              className="px-6 py-3 rounded-full text-sm font-semibold transition-colors whitespace-nowrap"
-              style={{
-                background: status === "loading" ? "#22c55e" : "#4ade80",
-                color: "#0b1a10",
-                opacity: status === "loading" ? 0.75 : 1,
-              }}
+              className="btn-white px-6 py-3 rounded-full text-sm font-semibold whitespace-nowrap shrink-0"
+              style={{ opacity: status === "loading" ? 0.75 : 1 }}
             >
               {status === "loading" ? "Guardando..." : "Unirme a la lista"}
             </button>
@@ -115,7 +121,7 @@ export function WaitlistSection() {
         )}
 
         {status === "error" && (
-          <p className="mt-4 text-sm" style={{ color: "rgba(240,100,100,0.8)" }}>
+          <p className="mt-4 text-sm" style={{ color: "rgba(255,220,220,0.9)" }}>
             Algo salio mal. Intenta de nuevo o escribenos a contacto@agrocampo.mx
           </p>
         )}

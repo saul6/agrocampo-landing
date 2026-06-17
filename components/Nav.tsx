@@ -15,24 +15,22 @@ export function Nav() {
     <header
       className="fixed top-0 left-0 right-0 z-50"
       style={{
-        background: scrolled ? "rgba(15, 34, 22, 0.88)" : "transparent",
+        background: scrolled ? "rgba(255,255,255,0.92)" : "transparent",
         backdropFilter: scrolled ? "blur(14px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(14px)" : "none",
-        borderBottom: scrolled
-          ? "1px solid rgba(255,255,255,0.07)"
-          : "1px solid transparent",
-        transition: "background 0.3s, border-color 0.3s",
+        boxShadow: scrolled ? "0 1px 0 rgba(0,0,0,0.07)" : "none",
+        transition: "background 0.3s, box-shadow 0.3s",
       }}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-semibold text-lg tracking-tight" style={{ color: "#f0fdf4" }}>
-          Agro<span style={{ color: "#4ade80" }}>Campo</span>
+        <a href="#" className="font-semibold text-lg tracking-tight" style={{ color: "#171717" }}>
+          Agro<span style={{ color: "#2b7ab5" }}>Campo</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#beneficios" className="link-muted text-sm">Beneficios</a>
-          <a href="#como-funciona" className="link-muted text-sm">Como funciona</a>
-          <a href="#demo" className="link-muted text-sm">Demo</a>
+          <a href="#beneficios" className="link-nav text-sm">Beneficios</a>
+          <a href="#como-funciona" className="link-nav text-sm">Como funciona</a>
+          <a href="#demo" className="link-nav text-sm">Demo</a>
         </nav>
 
         <a href="#lista-espera" className="btn-primary text-sm font-semibold px-5 py-2 rounded-full">
