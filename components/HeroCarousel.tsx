@@ -4,12 +4,12 @@ import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
 const slides = [
-  { src: "/images/hero-1.jpg", alt: "Cultivo de fresas" },
-  { src: "/images/hero-2.jpg", alt: "Parcela agricola" },
-  { src: "/images/hero-3.jpg", alt: "Campo de cultivo" },
-  { src: "/images/hero-4.jpg", alt: "Cultivo de berries" },
-  { src: "/images/hero-5.jpg", alt: "Trabajo agricola en campo" },
-  { src: "/images/hero-6.jpg", alt: "Berries maduros" },
+  { src: "/images/hero-1.jpg", alt: "Campo de fresas certificado para exportación con trazabilidad PrimusGFS" },
+  { src: "/images/hero-2.jpg", alt: "Parcela agrícola de berries con registros de inocuidad BPA" },
+  { src: "/images/hero-3.jpg", alt: "Cultivo de berries en temporada de cosecha bajo normas GlobalGAP" },
+  { src: "/images/hero-4.jpg", alt: "Berries maduros listos para cosecha y liberación documentada" },
+  { src: "/images/hero-5.jpg", alt: "Trabajadores agrícolas aplicando protocolos de inocuidad SENASICA" },
+  { src: "/images/hero-6.jpg", alt: "Cosecha de berries con documentación oficial para auditorías agrícolas" },
 ];
 
 export function HeroCarousel() {
