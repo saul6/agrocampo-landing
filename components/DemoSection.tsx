@@ -106,7 +106,7 @@ export function DemoSection() {
             className="text-base leading-relaxed max-w-[46ch]"
             style={{ color: "#717182" }}
           >
-            Te mostramos AgroCampo en vivo con tus propios datos y cultivos.
+            Te mostramos M.A.D.Y en vivo con tus propios datos y cultivos.
             Veinte minutos y sabes exactamente si es para tu operacion.
           </p>
 

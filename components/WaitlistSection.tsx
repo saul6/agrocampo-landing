@@ -64,7 +64,7 @@ export function WaitlistSection() {
           className="text-base leading-relaxed mb-10"
           style={{ color: "rgba(255,255,255,0.72)" }}
         >
-          AgroCampo esta en desarrollo activo. Dejanos tu correo y te avisamos
+          M.A.D.Y esta en desarrollo activo. Dejanos tu correo y te avisamos
           en cuanto este listo para tu operacion.
         </p>
 

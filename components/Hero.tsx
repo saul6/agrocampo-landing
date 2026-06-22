@@ -58,7 +58,7 @@ export function Hero() {
                   textShadow: "0 1px 6px rgba(0,0,0,0.18)",
                 }}
               >
-                AgroCampo automatiza los formatos de inocuidad que exige
+                M.A.D.Y automatiza los formatos de inocuidad que exige
                 PrimusGFS: desde la inspeccion preoperacional hasta el botiquin
                 de primeros auxilios. Todo desde tu celular, con PDF listo en
                 segundos.

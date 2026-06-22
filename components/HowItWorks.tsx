@@ -5,7 +5,7 @@ const steps = [
   {
     icon: DeviceMobile,
     title: "Registra desde el campo",
-    body: "Sin laptop, sin papel. Abre AgroCampo en tu celular, selecciona el rancho y captura la inspeccion en minutos.",
+    body: "Sin laptop, sin papel. Abre M.A.D.Y en tu celular, selecciona el rancho y captura la inspeccion en minutos.",
   },
   {
     icon: ShieldCheck,
