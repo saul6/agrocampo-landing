@@ -24,7 +24,7 @@ export function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="font-semibold text-lg tracking-tight" style={{ color: "#171717" }}>
-          Agro<span style={{ color: "#2b7ab5" }}>Campo</span>
+          M.A.D.Y
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
