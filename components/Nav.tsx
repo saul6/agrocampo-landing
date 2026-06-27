@@ -32,11 +32,11 @@ export function Nav() {
           <a href="#beneficios" className="link-nav text-sm">Beneficios</a>
           <a href="#como-funciona" className="link-nav text-sm">Como funciona</a>
           <a href="#precios" className="link-nav text-sm">Precios</a>
-          <a href="#demo" className="link-nav text-sm">Demo</a>
+          <a href="#plan-personalizado" className="link-nav text-sm">Contacto</a>
         </nav>
 
-        <a href="#lista-espera" className="btn-primary text-sm font-semibold px-5 py-2 rounded-full">
-          Unirse
+        <a href="#precios" className="btn-primary text-sm font-semibold px-5 py-2 rounded-full">
+          Ver precios
         </a>
       </div>
     </header>

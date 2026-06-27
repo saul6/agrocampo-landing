@@ -69,20 +69,20 @@ export function Hero() {
             <ScrollReveal delay={0.16}>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="#lista-espera"
+                  href="#precios"
                   className="btn-white px-6 py-3 rounded-full text-sm font-semibold"
                 >
-                  Unirme a la lista de espera
+                  Ver precios
                 </a>
                 <a
-                  href="#demo"
+                  href="#plan-personalizado"
                   className="px-6 py-3 rounded-full text-sm font-medium transition-colors active:scale-[0.97]"
                   style={{
                     border: "1.5px solid rgba(255,255,255,0.48)",
                     color: "#ffffff",
                   }}
                 >
-                  Ver demo
+                  Plan personalizado
                 </a>
               </div>
             </ScrollReveal>
