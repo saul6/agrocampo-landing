@@ -31,6 +31,7 @@ export function Nav() {
         <nav className="hidden md:flex items-center gap-8">
           <a href="#beneficios" className="link-nav text-sm">Beneficios</a>
           <a href="#como-funciona" className="link-nav text-sm">Como funciona</a>
+          <a href="#precios" className="link-nav text-sm">Precios</a>
           <a href="#demo" className="link-nav text-sm">Demo</a>
         </nav>
 
