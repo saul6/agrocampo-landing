@@ -6,25 +6,25 @@ const features = [
     icon: FilePdf,
     title: "Formatos digitales que los auditores aceptan",
     body: "Genera PDFs con el formato oficial BPA/SAIA directamente desde el celular. Sin Excel, sin papel perdido, sin fotocopiar.",
-    span: "col-span-2",
+    span: "md:col-span-2", // <-- Cambiado a md:
   },
   {
     icon: MapPin,
     title: "100% Multi-rancho",
     body: "Administra varios ranchos desde una sola cuenta. Cada rancho tiene su historial, sus inspecciones y su trazabilidad.",
-    span: "col-span-1",
+    span: "md:col-span-1", // <-- Cambiado a md:
   },
   {
     icon: Plant,
     title: "Catalogo ANEBERRIES incluido",
     body: "723 productos con sus autorizaciones para zarzamora, frambuesa, fresa y mora azul. Siempre actualizado.",
-    span: "col-span-1",
+    span: "md:col-span-1", // <-- Cambiado a md:
   },
   {
     icon: Package,
     title: "Control total del inventario",
     body: "Registra entradas, salidas y ajustes de agroquimicos. El saldo se descuenta automaticamente al guardar una aplicacion.",
-    span: "col-span-2",
+    span: "md:col-span-2", // <-- Cambiado a md:
   },
 ];
 
@@ -32,12 +32,12 @@ export function Features() {
   return (
     <section
       id="beneficios"
-      className="py-24"
+      className="py-16 md:py-24" // <-- Menos espacio vertical en celulares
       style={{ background: "#F6F9FB" }}
     >
       <div className="max-w-7xl mx-auto px-6">
         <ScrollReveal>
-          <div className="mb-14">
+          <div className="mb-10 md:mb-14">
             <p
               className="text-xs font-semibold tracking-[0.14em] uppercase mb-3"
               style={{ color: "#2AAD95" }}
@@ -52,19 +52,20 @@ export function Features() {
               }}
             >
               Todo lo que necesita tu operacion
-              <br />
+              <br className="hidden md:block" /> {/* Salto de línea solo en compu */}
               en una sola app.
             </h2>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-3 gap-4">
+        {/* AQUÍ ESTÁ LA MAGIA PRINCIPAL */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {features.map((f, i) => {
             const Icon = f.icon;
             return (
               <ScrollReveal key={i} delay={i * 0.07} className={f.span}>
                 <div
-                  className="h-full rounded-2xl p-7 flex flex-col gap-5 min-h-[200px]"
+                  className="h-full rounded-2xl p-6 md:p-7 flex flex-col gap-5 min-h-[200px]"
                   style={{
                     background: "#ffffff",
                     border: "1px solid #E3E9EF",

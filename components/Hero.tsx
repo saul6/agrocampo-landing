@@ -11,7 +11,7 @@ export function Hero() {
       <HeroCarousel />
 
       <div
-        className="relative z-20 flex items-center"
+        className="relative z-25 flex items-center"
         style={{ minHeight: "100dvh" }}
       >
         <div className="max-w-7xl mx-auto px-6 w-full py-24 lg:py-0">
@@ -29,7 +29,7 @@ export function Hero() {
               >
                 <span
                   className="w-1.5 h-1.5 rounded-full"
-                  style={{ background: "#81BEE5" }}
+                  style={{ background: "#93c5fd" }}
                 />
                 Preparado para tus Auditorías
               </span>
@@ -44,7 +44,7 @@ export function Hero() {
                 }}
               >
                 Inocuidad que auditan.{" "}
-                <span style={{ color: "#81BEE5" }}>Reportes</span> que se
+                <span style={{ color: "#bfdbfe" }}>Reportes</span> que se
                 generan solos.
               </h1>
             </ScrollReveal>
@@ -66,28 +66,6 @@ export function Hero() {
 
             <ScrollReveal delay={0.16}>
               <AreaCarousel />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="flex items-center gap-4 pt-1">
-                {["GlobalGAP", "PrimusGFS", "SENASICA"].map((cert, i) => (
-                  <div key={cert} className="flex items-center gap-4">
-                    {i > 0 && (
-                      <div
-                        className="w-px h-3"
-                        style={{ background: "rgba(255,255,255,0.28)" }}
-                      />
-                    )}
-
-                    <span
-                      className="text-xs font-medium"
-                      style={{ color: "rgba(255,255,255,0.62)" }}
-                    >
-                      {cert}
-                    </span>
-                  </div>
-                ))}
-              </div>
             </ScrollReveal>
           </div>
         </div>

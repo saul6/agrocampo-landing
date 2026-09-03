@@ -4,8 +4,8 @@ import { ScrollReveal } from "./ScrollReveal";
 const steps = [
   {
     icon: DeviceMobile,
-    title: "Registra desde el campo",
-    body: "Sin laptop, sin papel. Abre M.A.D.Y en tu celular, selecciona el rancho y captura la inspeccion en minutos.",
+    title: "Registra donde quiera que estes",
+    body: "Sin papel. Abre M.A.D.Y desde cualquier dispositivo, selecciona tu instalacion y captura la inspeccion en minutos.",
   },
   {
     icon: ShieldCheck,
