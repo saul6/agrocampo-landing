@@ -59,7 +59,7 @@ export function Hero() {
               >
                 M.A.D.Y automatiza los formatos de inocuidad que exige
                 PrimusGFS: desde la inspeccion preoperacional hasta el botiquin
-                de primeros auxilios. Todo desde tu celular, con PDF listo en
+                de primeros auxilios. Todo desde cualquier dispositivo, con PDF listo en
                 segundos.
               </p>
             </ScrollReveal>
