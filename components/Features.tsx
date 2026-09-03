@@ -33,14 +33,14 @@ export function Features() {
     <section
       id="beneficios"
       className="py-24"
-      style={{ background: "#f8f9fa" }}
+      style={{ background: "#F6F9FB" }}
     >
       <div className="max-w-7xl mx-auto px-6">
         <ScrollReveal>
           <div className="mb-14">
             <p
               className="text-xs font-semibold tracking-[0.14em] uppercase mb-3"
-              style={{ color: "#2b7ab5" }}
+              style={{ color: "#2AAD95" }}
             >
               Beneficios
             </p>
@@ -48,7 +48,7 @@ export function Features() {
               className="font-semibold leading-tight tracking-tight"
               style={{
                 fontSize: "clamp(1.8rem, 3vw, 2.75rem)",
-                color: "#0d5a8f",
+                color: "#173251",
               }}
             >
               Todo lo que necesita tu operacion
@@ -67,28 +67,28 @@ export function Features() {
                   className="h-full rounded-2xl p-7 flex flex-col gap-5 min-h-[200px]"
                   style={{
                     background: "#ffffff",
-                    border: "1px solid rgba(0,0,0,0.08)",
+                    border: "1px solid #E3E9EF",
                   }}
                 >
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
                     style={{
-                      background: "#e3f2fd",
-                      border: "1px solid rgba(43,122,181,0.2)",
+                      background: "#E6F6F2",
+                      border: "1px solid rgba(42,173,149,0.2)",
                     }}
                   >
-                    <Icon size={20} color="#2b7ab5" weight="duotone" />
+                    <Icon size={20} color="#2AAD95" weight="regular" />
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3
                       className="font-semibold text-base leading-snug"
-                      style={{ color: "#0d5a8f" }}
+                      style={{ color: "#173251" }}
                     >
                       {f.title}
                     </h3>
                     <p
                       className="text-sm leading-relaxed"
-                      style={{ color: "#717182" }}
+                      style={{ color: "#33404D" }}
                     >
                       {f.body}
                     </p>

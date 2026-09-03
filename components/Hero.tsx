@@ -29,7 +29,7 @@ export function Hero() {
               >
                 <span
                   className="w-1.5 h-1.5 rounded-full"
-                  style={{ background: "#93c5fd" }}
+                  style={{ background: "#81BEE5" }}
                 />
                 Preparado para tus Auditorías
               </span>
@@ -44,7 +44,7 @@ export function Hero() {
                 }}
               >
                 Inocuidad que auditan.{" "}
-                <span style={{ color: "#bfdbfe" }}>Reportes</span> que se
+                <span style={{ color: "#81BEE5" }}>Reportes</span> que se
                 generan solos.
               </h1>
             </ScrollReveal>

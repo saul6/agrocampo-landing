@@ -28,12 +28,12 @@ export function HeroCarousel() {
 
   return (
     <>
-      {/* Image stack — each image fades in/out */}
+      {/* Image stack — each image fades in/out, con zoom lento (Ken Burns) */}
       <div className="absolute inset-0 overflow-hidden">
         {slides.map((slide, i) => (
           <div
             key={i}
-            className="absolute inset-0"
+            className="absolute inset-0 overflow-hidden"
             style={{
               opacity: i === current ? 1 : 0,
               transition: "opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1)",
@@ -44,7 +44,7 @@ export function HeroCarousel() {
               src={slide.src}
               alt={slide.alt}
               fill
-              className="object-cover object-center"
+              className="object-cover object-center kenburns"
               priority={i === 0}
               sizes="100vw"
               quality={75}
@@ -53,12 +53,12 @@ export function HeroCarousel() {
         ))}
       </div>
 
-      {/* Blue brand overlay — directional: opaco izquierda (texto), se abre a la derecha (foto) */}
+      {/* Overlay navy oficial M.A.D.Y — direccional: opaco izquierda (texto), se abre a la derecha (foto) */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to right, rgba(12,36,60,0.68) 0%, rgba(43,122,181,0.44) 45%, rgba(43,122,181,0.28) 100%)",
+            "linear-gradient(to right, rgba(23,50,81,0.72) 0%, rgba(23,50,81,0.5) 45%, rgba(23,50,81,0.32) 100%)",
         }}
       />
 
@@ -67,11 +67,11 @@ export function HeroCarousel() {
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(12,36,60,0.18) 0%, transparent 30%, transparent 65%, rgba(12,36,60,0.42) 100%)",
+            "linear-gradient(to bottom, rgba(23,50,81,0.2) 0%, transparent 30%, transparent 65%, rgba(23,50,81,0.46) 100%)",
         }}
       />
 
-      {/* Dot indicators — pill shape for active, small circle for rest */}
+      {/* Dot indicators */}
       <div
         className="absolute bottom-7 left-1/2 -translate-x-1/2 flex items-center gap-[7px] z-20"
         onMouseEnter={() => setPaused(true)}
@@ -86,8 +86,7 @@ export function HeroCarousel() {
               height: "5px",
               width: i === current ? "22px" : "5px",
               borderRadius: "9999px",
-              background:
-                i === current ? "#ffffff" : "rgba(255,255,255,0.38)",
+              background: i === current ? "#ffffff" : "rgba(255,255,255,0.38)",
               border: "none",
               padding: 0,
               cursor: "pointer",
