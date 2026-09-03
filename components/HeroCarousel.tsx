@@ -4,12 +4,12 @@ import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
 const slides = [
-  { src: "/images/hero-1.jpg", alt: "Campo de fresas certificado para exportación con trazabilidad PrimusGFS" },
-  { src: "/images/hero-2.jpg", alt: "Parcela agrícola de berries con registros de inocuidad BPA" },
-  { src: "/images/hero-3.jpg", alt: "Cultivo de berries en temporada de cosecha bajo normas GlobalGAP" },
-  { src: "/images/hero-4.jpg", alt: "Berries maduros listos para cosecha y liberación documentada" },
-  { src: "/images/hero-5.jpg", alt: "Trabajadores agrícolas aplicando protocolos de inocuidad SENASICA" },
-  { src: "/images/hero-6.jpg", alt: "Cosecha de berries con documentación oficial para auditorías agrícolas" },
+  { src: "/images/almacen.jpg", alt: "Campo de fresas certificado para exportación con trazabilidad PrimusGFS" },
+  { src: "/images/campo.jpg", alt: "Parcela agrícola de berries con registros de inocuidad BPA" },
+  { src: "/images/carnicos.jpg", alt: "Cultivo de berries en temporada de cosecha bajo normas GlobalGAP" },
+  { src: "/images/cuartofrio.jpg", alt: "Berries maduros listos para cosecha y liberación documentada" },
+  { src: "/images/empacadora.jpeg", alt: "Trabajadores agrícolas aplicando protocolos de inocuidad SENASICA" },
+  { src: "/images/invernadero.jpeg", alt: "Cosecha de berries con documentación oficial para auditorías agrícolas" },
 ];
 
 export function HeroCarousel() {
@@ -58,7 +58,7 @@ export function HeroCarousel() {
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to right, rgba(23,50,81,0.72) 0%, rgba(23,50,81,0.5) 45%, rgba(23,50,81,0.32) 100%)",
+            "linear-gradient(to right, rgba(47, 73, 62, 0.8) 0%, rgba(47, 73, 62,0.5) 45%, rgba(47, 73, 62,0.45) 100%)",
         }}
       />
 
@@ -67,7 +67,7 @@ export function HeroCarousel() {
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(23,50,81,0.2) 0%, transparent 30%, transparent 65%, rgba(23,50,81,0.46) 100%)",
+            "linear-gradient(to bottom, rgba(47, 73, 62,0.6) 0%, transparent 30%, transparent 65%, rgba(47, 73, 62,0.56) 100%)",
         }}
       />
 
