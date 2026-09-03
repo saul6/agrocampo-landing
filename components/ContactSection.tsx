@@ -107,10 +107,10 @@ export function ContactSection() {
               <span style={{ color: "#607286" }}>contáctanos</span>
             </h2>
             <p className="text-base leading-relaxed max-w-[46ch]" style={{ color: "#33404D" }}>
-              En M.A.D.Y sabemos que cada operación y proceso de control exige soluciones precisas...
+              En M.A.D.Y sabemos que cada operación y proceso de control exige soluciones precisas.
             </p>
             <p className="text-base leading-relaxed max-w-[46ch]" style={{ color: "#33404D" }}>
-              Contáctanos al instante. No esperes más para optimizar tu gestión de inocuidad...
+              Contáctanos al instante. No esperes más para optimizar tu gestión de inocuidad.
             </p>
 
             <ul className="flex flex-col gap-3">
