@@ -1,18 +1,68 @@
-import { ScrollReveal } from "./ScrollReveal";
+// components/AreaDetails.tsx
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const areas = [
-  { id: "almacen", title: "Almacén", bg: "#ffffff" },
-  { id: "campo", title: "Campo", bg: "#F6F9FB" },
-  { id: "carnicos", title: "Cárnicos", bg: "#F6F9FB" },
-  { id: "cuarto-frio", title: "Cuarto Frío", bg: "#ffffff" },
-  { id: "empacadora", title: "Empacadora", bg: "#F6F9FB" },
-  { id: "invernadero", title: "Invernadero", bg: "#F6F9FB" },
+  {
+    id: "campo",
+    title: "Campo",
+    hook: "Buenas Prácticas Agrícolas, desde la siembra hasta la cosecha.",
+    description: "Digitaliza el control de inocuidad en la producción a cielo abierto: aplicaciones de agroquímicos, fertilización, monitoreo de plagas, manejo del agua, higiene del personal y cosecha. Cada registro queda con fecha, responsable y evidencia, listo para auditorías de campo.",
+    keywords: ["aplicaciones", "fertilización", "cosecha", "agua", "BPA", "auditoría de granja"],
+    image: "/areas/campo.jpg",
+    color: "bg-white"
+  },
+  {
+    id: "invernadero",
+    title: "Invernadero",
+    hook: "Inocuidad y trazabilidad en producción protegida.",
+    description: "Lleva las Buenas Prácticas Agrícolas al ambiente controlado del invernadero: control de insumos, monitoreo de plagas, higiene y prácticas del personal, y registros de la instalación de producción. Todo capturado desde el celular, sin papel.",
+    keywords: ["producción protegida", "insumos", "plagas", "higiene", "BPA"],
+    image: "/areas/invernadero.jpg",
+    color: "bg-slate-50"
+  },
+  {
+    id: "almacen",
+    title: "Almacén",
+    hook: "Recepción, almacenamiento y trazabilidad bajo control.",
+    description: "Controla la inocuidad en el almacén y el empaque: recepción diaria de producto, trazabilidad y recuperación de lotes, limpieza y sanitización, mantenimiento, control de plagas y registro de personal. Genera los formatos y la trazabilidad que exigen las auditorías.",
+    keywords: ["recepción", "trazabilidad", "limpieza", "mantenimiento", "plagas", "BPM"],
+    image: "/areas/almacen.jpg",
+    color: "bg-white"
+  },
+  {
+    id: "cuarto-frio",
+    title: "Cuarto Frío",
+    hook: "Cadena de frío y cumplimiento para exportar con confianza.",
+    description: "Une el control de la cadena de frío con la operación de exportación: temperaturas del conservador, entradas y salidas de pre-enfriamiento, limpieza de cuartos fríos, manifiestos de embarque y trazabilidad completa del producto, con los controles de inocuidad que exigen los estándares internacionales.",
+    keywords: ["cadena de frío", "temperatura", "pre-enfriamiento", "manifiesto", "exportación", "trazabilidad"],
+    image: "/areas/cuarto-frio.jpg",
+    color: "bg-slate-50"
+  },
+  {
+    id: "empacadora",
+    title: "Empacadora",
+    hook: "Buenas Prácticas de Manufactura en cada línea de empaque.",
+    description: "Digitaliza la inocuidad en la empacadora: BPM, HACCP, higiene y control del personal, manejo del material de empaque, limpieza de equipos y áreas, y preparación del embarque. Formatos homogéneos y listos para auditoría.",
+    keywords: ["BPM", "HACCP", "material de empaque", "higiene", "embarque"],
+    image: "/areas/empacadora.jpg",
+    color: "bg-white"
+  },
+  {
+    id: "carnicos",
+    title: "Cárnicos",
+    hook: "Inocuidad para operaciones de cárnicos y establecimientos TIF.",
+    description: "Adapta los controles de inocuidad a establecimientos de cárnicos y Tipo Inspección Federal (TIF): HACCP, Buenas Prácticas de Manufactura, higiene y registro del personal, y los formatos de control que requiere el sector. Digital, trazable y ordenado.",
+    keywords: ["TIF", "cárnicos", "HACCP", "BPM", "higiene"],
+    image: "/areas/carnicos.jpg",
+    color: "bg-slate-50"
+  }
 ];
 
 export const AreaDetails = () => {
   return (
-    <>
-      <section className="pt-24 pb-8" style={{ background: "#ffffff" }}>
+    <> 
+      {/* SECCIÓN DE ENCABEZADO - AJUSTADA EXACTAMENTE A HOWITWORKS */}
+      <section className="py-24" style={{ background: "#ffffff" }}>
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="mb-16 text-center pt-1">
@@ -37,48 +87,52 @@ export const AreaDetails = () => {
         </div>
       </section>
 
+      {/* LISTADO DE ÁREAS INTERCALADAS */}
       {areas.map((area, index) => (
-        <section
-          key={area.id}
-          id={area.id}
-          className="py-20 scroll-mt-20"
-          style={{ background: area.bg }}
+        <section 
+          key={area.id} 
+          id={area.id} 
+          className={`py-24 ${area.color} scroll-mt-20`}
         >
-          <div className="max-w-7xl mx-auto px-6">
-            <div
-              className={`flex flex-col items-center gap-12 ${
-                index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-              }`}
-            >
+          <div className="container mx-auto px-6">
+            <div className={`flex flex-col items-center gap-16 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+              
+              {/* Contenedor de Imagen */}
               <div className="w-full md:w-1/2">
-                <div
-                  className="relative h-[400px] rounded-3xl overflow-hidden shadow-xl flex items-center justify-center"
-                  style={{
-                    background: "linear-gradient(135deg, #173251 0%, #81BEE5 100%)",
-                  }}
-                >
-                  <span
-                    className="text-2xl font-semibold tracking-tight"
-                    style={{ color: "rgba(255,255,255,0.85)" }}
-                  >
-                    {area.title}
-                  </span>
+                <div className="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                  <img 
+                    src={area.image} 
+                    alt={area.title}
+                    className="object-cover w-full h-full"
+                  />
                 </div>
               </div>
 
+              {/* Contenedor de Texto */}
               <div className="w-full md:w-1/2 space-y-6">
-                <h2
-                  className="text-4xl font-bold"
-                  style={{ color: "#173251" }}
-                >
+                <h3 className="text-sm font-bold tracking-widest text-[#2AAD95] uppercase">
                   {area.title}
-                </h2>
-                <button
-                  className="btn-primary px-6 py-2.5 rounded-lg font-semibold"
-                >
-                  Saber más sobre {area.title}
-                </button>
+                </h3>
+                <p className="text-2xl font-semibold text-[#173251] leading-tight">
+                  {area.hook}
+                </p>
+                <p className="text-lg text-slate-600 leading-relaxed font-normal">
+                  {area.description}
+                </p>
+                
+                {/* Etiquetas de Palabras Clave */}
+                <div className="flex flex-wrap gap-2 pt-4">
+                  {area.keywords.map((word) => (
+                    <span 
+                      key={word} 
+                      className="px-3 py-1 bg-blue-50 text-[#2AAD95] text-xs font-bold rounded-full uppercase tracking-wider border border-blue-100"
+                    >
+                      {word}
+                    </span>
+                  ))}
+                </div>
               </div>
+
             </div>
           </div>
         </section>
