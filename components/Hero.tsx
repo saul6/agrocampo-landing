@@ -57,10 +57,8 @@ export function Hero() {
                   textShadow: "0 1px 6px rgba(0,0,0,0.18)",
                 }}
               >
-                M.A.D.Y automatiza los formatos de inocuidad que exige
-                PrimusGFS: desde la inspeccion preoperacional hasta el botiquin
-                de primeros auxilios. Todo desde cualquier dispositivo, con PDF listo en
-                segundos.
+                M.A.D.Y automatiza los formatos de inocuidad de tu operación: desde la inspección preoperacional hasta el botiquín de primeros auxilios. 
+                Todo desde cualquier dispositivo, con PDF listo en segundos.
               </p>
             </ScrollReveal>
 
