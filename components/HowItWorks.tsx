@@ -4,7 +4,7 @@ import { ScrollReveal } from "./ScrollReveal";
 const steps = [
   {
     icon: DeviceMobile,
-    title: "Registra donde quiera que estes",
+    title: "Registra donde quiera que estés",
     body: "Sin papel. Abre M.A.D.Y desde cualquier dispositivo, selecciona tu instalación y captura la inspección en minutos.",
   },
   {
@@ -29,7 +29,7 @@ export function HowItWorks() {
               className="text-xs font-semibold tracking-[0.14em] uppercase mb-3"
               style={{ color: "#2AAD95" }}
             >
-              Como funciona
+              Cómo funciona
             </p>
             <h2
               className="font-semibold tracking-tight"
