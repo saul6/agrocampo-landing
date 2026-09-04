@@ -10,20 +10,20 @@ const features = [
   },
   {
     icon: MapPin,
-    title: "100% Multi-rancho",
-    body: "Administra varios ranchos desde una sola cuenta. Cada rancho tiene su historial, sus inspecciones y su trazabilidad.",
+    title: "Control centralizado multi-sitio",
+    body: "Administra diferentes instalaciones y predios desde una sola cuenta. Cada espacio cuenta con su propio historial, registros de inspección y trazabilidad independiente.",
     span: "md:col-span-1", // <-- Cambiado a md:
   },
   {
     icon: Plant,
-    title: "Catalogo ANEBERRIES incluido",
+    title: "Catalogo incluido",
     body: "723 productos con sus autorizaciones para zarzamora, frambuesa, fresa y mora azul. Siempre actualizado.",
     span: "md:col-span-1", // <-- Cambiado a md:
   },
   {
     icon: Package,
     title: "Control total del inventario",
-    body: "Registra entradas, salidas y ajustes de agroquimicos. El saldo se descuenta automaticamente al guardar una aplicacion.",
+    body: "Registra entradas, salidas y ajustes de agroquímicos. El saldo se descuenta automáticamente al guardar una aplicación.",
     span: "md:col-span-2", // <-- Cambiado a md:
   },
 ];
@@ -51,7 +51,7 @@ export function Features() {
                 color: "#173251",
               }}
             >
-              Todo lo que necesita tu operacion
+              Todo lo que necesita tu operación
               <br className="hidden md:block" /> {/* Salto de línea solo en compu */}
               en una sola app.
             </h2>
