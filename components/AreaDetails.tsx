@@ -3,48 +3,21 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 const areas = [
   {
-    id: "campo",
-    title: "Campo",
-    hook: "Buenas Prácticas Agrícolas, desde la siembra hasta la cosecha.",
-    description: "Digitaliza el control de inocuidad en la producción a cielo abierto: aplicaciones de agroquímicos, fertilización, monitoreo de plagas, manejo del agua, higiene del personal y cosecha. Cada registro queda con fecha, responsable y evidencia, listo para auditorías de campo.",
-    keywords: ["aplicaciones", "fertilización", "cosecha", "agua", "BPA", "auditoría de granja"],
-    image: "/areas/campo.jpg",
-    color: "bg-white"
-  },
-  {
-    id: "invernadero",
-    title: "Invernadero",
-    hook: "Inocuidad y trazabilidad en producción protegida.",
-    description: "Lleva las Buenas Prácticas Agrícolas al ambiente controlado del invernadero: control de insumos, monitoreo de plagas, higiene y prácticas del personal, y registros de la instalación de producción. Todo capturado desde el celular, sin papel.",
-    keywords: ["producción protegida", "insumos", "plagas", "higiene", "BPA"],
-    image: "/areas/invernadero.jpg",
-    color: "bg-slate-50"
-  },
-  {
     id: "almacen",
     title: "Almacén",
     hook: "Recepción, almacenamiento y trazabilidad bajo control.",
     description: "Controla la inocuidad en el almacén y el empaque: recepción diaria de producto, trazabilidad y recuperación de lotes, limpieza y sanitización, mantenimiento, control de plagas y registro de personal. Genera los formatos y la trazabilidad que exigen las auditorías.",
     keywords: ["recepción", "trazabilidad", "limpieza", "mantenimiento", "plagas", "BPM"],
-    image: "/areas/almacen.jpg",
+    image: "/images/Imagen Almacen mejorada.png",
     color: "bg-white"
   },
   {
-    id: "cuarto-frio",
-    title: "Cuarto Frío",
-    hook: "Cadena de frío y cumplimiento para exportar con confianza.",
-    description: "Une el control de la cadena de frío con la operación de exportación: temperaturas del conservador, entradas y salidas de pre-enfriamiento, limpieza de cuartos fríos, manifiestos de embarque y trazabilidad completa del producto, con los controles de inocuidad que exigen los estándares internacionales.",
-    keywords: ["cadena de frío", "temperatura", "pre-enfriamiento", "manifiesto", "exportación", "trazabilidad"],
-    image: "/areas/cuarto-frio.jpg",
-    color: "bg-slate-50"
-  },
-  {
-    id: "empacadora",
-    title: "Empacadora",
-    hook: "Buenas Prácticas de Manufactura en cada línea de empaque.",
-    description: "Digitaliza la inocuidad en la empacadora: BPM, HACCP, higiene y control del personal, manejo del material de empaque, limpieza de equipos y áreas, y preparación del embarque. Formatos homogéneos y listos para auditoría.",
-    keywords: ["BPM", "HACCP", "material de empaque", "higiene", "embarque"],
-    image: "/areas/empacadora.jpg",
+    id: "campo",
+    title: "Campo",
+    hook: "Buenas Prácticas Agrícolas, desde la siembra hasta la cosecha.",
+    description: "Digitaliza el control de inocuidad en la producción a cielo abierto: aplicaciones de agroquímicos, fertilización, monitoreo de plagas, manejo del agua, higiene del personal y cosecha. Cada registro queda con fecha, responsable y evidencia, listo para auditorías de campo.",
+    keywords: ["aplicaciones", "fertilización", "cosecha", "agua", "BPA", "auditoría de granja"],
+    image: "/images/Imagen campo mejorada.jpg",
     color: "bg-white"
   },
   {
@@ -53,7 +26,34 @@ const areas = [
     hook: "Inocuidad para operaciones de cárnicos y establecimientos TIF.",
     description: "Adapta los controles de inocuidad a establecimientos de cárnicos y Tipo Inspección Federal (TIF): HACCP, Buenas Prácticas de Manufactura, higiene y registro del personal, y los formatos de control que requiere el sector. Digital, trazable y ordenado.",
     keywords: ["TIF", "cárnicos", "HACCP", "BPM", "higiene"],
-    image: "/areas/carnicos.jpg",
+    image: "/images/Imagen carnicos mejorada.jpg",
+    color: "bg-slate-50"
+  },
+  {
+    id: "cuarto-frio",
+    title: "Cuarto Frío",
+    hook: "Cadena de frío y cumplimiento para exportar con confianza.",
+    description: "Une el control de la cadena de frío con la operación de exportación: temperaturas del conservador, entradas y salidas de pre-enfriamiento, limpieza de cuartos fríos, manifiestos de embarque y trazabilidad completa del producto, con los controles de inocuidad que exigen los estándares internacionales.",
+    keywords: ["cadena de frío", "temperatura", "pre-enfriamiento", "manifiesto", "exportación", "trazabilidad"],
+    image: "/images/Imagen cuarto frio mejorada.jpg",
+    color: "bg-slate-50"
+  },
+  {
+    id: "empacadora",
+    title: "Empacadora",
+    hook: "Buenas Prácticas de Manufactura en cada línea de empaque.",
+    description: "Digitaliza la inocuidad en la empacadora: BPM, HACCP, higiene y control del personal, manejo del material de empaque, limpieza de equipos y áreas, y preparación del embarque. Formatos homogéneos y listos para auditoría.",
+    keywords: ["BPM", "HACCP", "material de empaque", "higiene", "embarque"],
+    image: "/images/Imagen empacadora mejorada.jpg",
+    color: "bg-white"
+  },
+  {
+    id: "invernadero",
+    title: "Invernadero",
+    hook: "Inocuidad y trazabilidad en producción protegida.",
+    description: "Lleva las Buenas Prácticas Agrícolas al ambiente controlado del invernadero: control de insumos, monitoreo de plagas, higiene y prácticas del personal, y registros de la instalación de producción. Todo capturado desde el celular, sin papel.",
+    keywords: ["producción protegida", "insumos", "plagas", "higiene", "BPA"],
+    image: "/images/Imagen invernadero mejorada.jpg",
     color: "bg-slate-50"
   }
 ];
