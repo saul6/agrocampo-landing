@@ -5,17 +5,17 @@ const steps = [
   {
     icon: DeviceMobile,
     title: "Registra donde quiera que estes",
-    body: "Sin papel. Abre M.A.D.Y desde cualquier dispositivo, selecciona tu instalacion y captura la inspeccion en minutos.",
+    body: "Sin papel. Abre M.A.D.Y desde cualquier dispositivo, selecciona tu instalación y captura la inspección en minutos.",
   },
   {
     icon: ShieldCheck,
     title: "El sistema lleva el control",
-    body: "Las restricciones de frecuencia, los limites de productos y las fechas se validan automaticamente en tiempo real.",
+    body: "Las restricciones de frecuencia, los límites de productos y las fechas se validan automáticamente en tiempo real.",
   },
   {
     icon: FileArrowDown,
     title: "PDF listo para el auditor",
-    body: "Con un toque generas el reporte oficial. Descargalo, imprimelo o compartelo directamente desde el celular.",
+    body: "Con un toque generas el reporte oficial. Descárgalo, imprímelo o compártelo directamente desde el celular.",
   },
 ];
 

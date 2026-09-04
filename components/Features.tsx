@@ -5,7 +5,7 @@ const features = [
   {
     icon: FilePdf,
     title: "Formatos digitales que los auditores aceptan",
-    body: "Genera PDFs con el formato oficial BPA/SAIA directamente desde el celular. Sin Excel, sin papel perdido, sin fotocopiar.",
+    body: "Genera PDFs con el formato oficial BPA/SAIA directamente desde cualquier dispositivo. Sin Excel, sin papel perdido, sin fotocopiar.",
     span: "md:col-span-2", // <-- Cambiado a md:
   },
   {
