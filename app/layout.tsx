@@ -9,53 +9,60 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://agrocampo.mx";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://inicio.mady.com.mx";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "M.A.D.Y — Trazabilidad e inocuidad para el campo mexicano",
+  title: {
+    default: "M.A.D.Y · Inocuidad Inteligente",
+    template: "%s | M.A.D.Y",
+  },
   description:
-    "M.A.D.Y automatiza los registros de inocuidad agrícola que exige PrimusGFS: inspecciones preoperacionales, botiquín, vidrio y plástico, cosecha y liberación. Sector berry — GlobalGAP, SENASICA, BPA/SAIA. PDF oficial desde el celular en segundos.",
+    "M.A.D.Y es la plataforma de inocuidad alimentaria digital para campo, empaque y cárnicos. Digitaliza formatos PrimusGFS, BPM y HACCP, gestiona trazabilidad multi-rancho y genera PDFs oficiales desde el celular en segundos.",
   keywords: [
+    "inocuidad alimentaria",
     "inocuidad agrícola",
     "PrimusGFS",
+    "HACCP",
+    "BPM",
     "GlobalGAP",
     "SENASICA",
     "registros de inocuidad",
-    "sector berry",
     "trazabilidad agrícola",
+    "empaque",
+    "cárnicos",
+    "auditorías de inocuidad",
     "BPA",
     "SAIA",
-    "inspección preoperacional",
-    "cosecha y liberación",
     "M.A.D.Y",
   ],
   alternates: {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "M.A.D.Y — Trazabilidad e inocuidad para el campo mexicano",
+    title: "M.A.D.Y · Inocuidad Inteligente",
     description:
-      "Genera PDFs con el formato oficial BPA/SAIA directamente desde tu celular. Sin Excel, sin papel. Multi-rancho, multi-cultivo, certificaciones GlobalGAP y PrimusGFS.",
+      "Plataforma de inocuidad alimentaria digital para campo, empaque y cárnicos. Formatos PrimusGFS, BPM y HACCP digitales. Trazabilidad multi-rancho y PDFs oficiales desde el celular.",
     type: "website",
     locale: "es_MX",
     url: siteUrl,
     siteName: "M.A.D.Y",
     images: [
       {
-        url: "/images/hero-1.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "M.A.D.Y — Software de inocuidad agrícola para el sector berry",
+        alt: "M.A.D.Y — Plataforma de inocuidad alimentaria digital",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "M.A.D.Y — Inocuidad agrícola desde el celular",
+    title: "M.A.D.Y · Inocuidad Inteligente",
     description:
-      "Formatos PrimusGFS digitales, trazabilidad multi-rancho y PDFs oficiales. Todo desde el celular.",
-    images: ["/images/hero-1.jpg"],
+      "Formatos PrimusGFS, BPM y HACCP digitales. Trazabilidad para campo, empaque y cárnicos. PDFs oficiales desde el celular.",
+    images: ["/og-image.png"],
   },
 };
 
